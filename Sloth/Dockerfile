@@ -10,7 +10,8 @@ RUN apt-get update -yq && apt-get upgrade -yq && \
     apt-get install -y \
       git build-essential libtool-bin libglib2.0-dev \
       wget autoconf automake bison curl clang make unzip \
-      pkg-config libfdt-dev libpixman-1-dev
+      pkg-config libfdt-dev libpixman-1-dev \
+      python3 vim-common
 
 # Variables d’environnement
 ENV SLOTH_WORK_DIR=/sloth/src \
@@ -59,5 +60,8 @@ RUN git apply --stat /setup/libfuzzer.patch && \
 # 7) Retour au workspace principal
 WORKDIR ${SLOTH_WORK_DIR}
 
-# 8) Ouvrir un shell interactif pour compiler manuellement
+# 8) Ajouter le script de fuzzing
+ADD src/fuzz_runner.py /sloth/src/
+
+# 9) Ouvrir un shell interactif pour compiler manuellement
 RUN /bin/bash
