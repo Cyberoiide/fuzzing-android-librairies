@@ -1,0 +1,515 @@
+.
+├── jni
+│   ├── 2.0.0.zip
+│   └── libjpeg
+│       ├── BUILDING.md
+│       ├── Brewfile
+│       ├── CMakeLists.txt
+│       ├── ChangeLog.md
+│       ├── LICENSE.md
+│       ├── README.ijg
+│       ├── README.md
+│       ├── cderror.h
+│       ├── cdjpeg.c
+│       ├── cdjpeg.h
+│       ├── change.log
+│       ├── cjpeg.1
+│       ├── cjpeg.c
+│       ├── cmakescripts
+│       │   ├── BuildPackages.cmake
+│       │   ├── GNUInstallDirs.cmake
+│       │   ├── cmake_uninstall.cmake.in
+│       │   └── testclean.cmake
+│       ├── cmyk.h
+│       ├── coderules.txt
+│       ├── djpeg.1
+│       ├── djpeg.c
+│       ├── doc
+│       │   └── html
+│       │       ├── annotated.html
+│       │       ├── bc_s.png
+│       │       ├── bdwn.png
+│       │       ├── classes.html
+│       │       ├── closed.png
+│       │       ├── doxygen-extra.css
+│       │       ├── doxygen.css
+│       │       ├── doxygen.png
+│       │       ├── dynsections.js
+│       │       ├── ftv2blank.png
+│       │       ├── ftv2cl.png
+│       │       ├── ftv2doc.png
+│       │       ├── ftv2folderclosed.png
+│       │       ├── ftv2folderopen.png
+│       │       ├── ftv2lastnode.png
+│       │       ├── ftv2link.png
+│       │       ├── ftv2mlastnode.png
+│       │       ├── ftv2mnode.png
+│       │       ├── ftv2mo.png
+│       │       ├── ftv2node.png
+│       │       ├── ftv2ns.png
+│       │       ├── ftv2plastnode.png
+│       │       ├── ftv2pnode.png
+│       │       ├── ftv2splitbar.png
+│       │       ├── ftv2vertline.png
+│       │       ├── functions.html
+│       │       ├── functions_vars.html
+│       │       ├── group___turbo_j_p_e_g.html
+│       │       ├── index.html
+│       │       ├── jquery.js
+│       │       ├── modules.html
+│       │       ├── nav_f.png
+│       │       ├── nav_g.png
+│       │       ├── nav_h.png
+│       │       ├── open.png
+│       │       ├── search
+│       │       │   ├── all_63.html
+│       │       │   ├── all_63.js
+│       │       │   ├── all_64.html
+│       │       │   ├── all_64.js
+│       │       │   ├── all_68.html
+│       │       │   ├── all_68.js
+│       │       │   ├── all_6e.html
+│       │       │   ├── all_6e.js
+│       │       │   ├── all_6f.html
+│       │       │   ├── all_6f.js
+│       │       │   ├── all_72.html
+│       │       │   ├── all_72.js
+│       │       │   ├── all_74.html
+│       │       │   ├── all_74.js
+│       │       │   ├── all_77.html
+│       │       │   ├── all_77.js
+│       │       │   ├── all_78.html
+│       │       │   ├── all_78.js
+│       │       │   ├── all_79.html
+│       │       │   ├── all_79.js
+│       │       │   ├── classes_74.html
+│       │       │   ├── classes_74.js
+│       │       │   ├── close.png
+│       │       │   ├── enums_74.html
+│       │       │   ├── enums_74.js
+│       │       │   ├── enumvalues_74.html
+│       │       │   ├── enumvalues_74.js
+│       │       │   ├── functions_74.html
+│       │       │   ├── functions_74.js
+│       │       │   ├── groups_74.html
+│       │       │   ├── groups_74.js
+│       │       │   ├── mag_sel.png
+│       │       │   ├── nomatches.html
+│       │       │   ├── search.css
+│       │       │   ├── search.js
+│       │       │   ├── search_l.png
+│       │       │   ├── search_m.png
+│       │       │   ├── search_r.png
+│       │       │   ├── typedefs_74.html
+│       │       │   ├── typedefs_74.js
+│       │       │   ├── variables_63.html
+│       │       │   ├── variables_63.js
+│       │       │   ├── variables_64.html
+│       │       │   ├── variables_64.js
+│       │       │   ├── variables_68.html
+│       │       │   ├── variables_68.js
+│       │       │   ├── variables_6e.html
+│       │       │   ├── variables_6e.js
+│       │       │   ├── variables_6f.html
+│       │       │   ├── variables_6f.js
+│       │       │   ├── variables_72.html
+│       │       │   ├── variables_72.js
+│       │       │   ├── variables_74.html
+│       │       │   ├── variables_74.js
+│       │       │   ├── variables_77.html
+│       │       │   ├── variables_77.js
+│       │       │   ├── variables_78.html
+│       │       │   ├── variables_78.js
+│       │       │   ├── variables_79.html
+│       │       │   └── variables_79.js
+│       │       ├── structtjregion.html
+│       │       ├── structtjscalingfactor.html
+│       │       ├── structtjtransform.html
+│       │       ├── sync_off.png
+│       │       ├── sync_on.png
+│       │       ├── tab_a.png
+│       │       ├── tab_b.png
+│       │       ├── tab_h.png
+│       │       ├── tab_s.png
+│       │       └── tabs.css
+│       ├── doxygen-extra.css
+│       ├── doxygen.config
+│       ├── example.txt
+│       ├── jaricom.c
+│       ├── java
+│       │   ├── CMakeLists.txt
+│       │   ├── MANIFEST.MF
+│       │   ├── README
+│       │   ├── TJBench.java
+│       │   ├── TJExample.java
+│       │   ├── TJUnitTest.java
+│       │   ├── doc
+│       │   │   ├── allclasses-frame.html
+│       │   │   ├── allclasses-noframe.html
+│       │   │   ├── constant-values.html
+│       │   │   ├── deprecated-list.html
+│       │   │   ├── help-doc.html
+│       │   │   ├── index-all.html
+│       │   │   ├── index.html
+│       │   │   ├── org
+│       │   │   │   └── libjpegturbo
+│       │   │   │       └── turbojpeg
+│       │   │   │           ├── TJ.html
+│       │   │   │           ├── TJCompressor.html
+│       │   │   │           ├── TJCustomFilter.html
+│       │   │   │           ├── TJDecompressor.html
+│       │   │   │           ├── TJException.html
+│       │   │   │           ├── TJScalingFactor.html
+│       │   │   │           ├── TJTransform.html
+│       │   │   │           ├── TJTransformer.html
+│       │   │   │           ├── YUVImage.html
+│       │   │   │           ├── package-frame.html
+│       │   │   │           ├── package-summary.html
+│       │   │   │           └── package-tree.html
+│       │   │   ├── overview-tree.html
+│       │   │   ├── package-list
+│       │   │   ├── resources
+│       │   │   │   ├── background.gif
+│       │   │   │   ├── tab.gif
+│       │   │   │   ├── titlebar.gif
+│       │   │   │   └── titlebar_end.gif
+│       │   │   ├── script.js
+│       │   │   ├── serialized-form.html
+│       │   │   └── stylesheet.css
+│       │   ├── org
+│       │   │   └── libjpegturbo
+│       │   │       └── turbojpeg
+│       │   │           ├── TJ.java
+│       │   │           ├── TJCompressor.java
+│       │   │           ├── TJCustomFilter.java
+│       │   │           ├── TJDecompressor.java
+│       │   │           ├── TJException.java
+│       │   │           ├── TJLoader-unix.java.in
+│       │   │           ├── TJLoader-win.java.in
+│       │   │           ├── TJScalingFactor.java
+│       │   │           ├── TJTransform.java
+│       │   │           ├── TJTransformer.java
+│       │   │           └── YUVImage.java
+│       │   ├── org_libjpegturbo_turbojpeg_TJ.h
+│       │   ├── org_libjpegturbo_turbojpeg_TJCompressor.h
+│       │   ├── org_libjpegturbo_turbojpeg_TJDecompressor.h
+│       │   └── org_libjpegturbo_turbojpeg_TJTransformer.h
+│       ├── jcapimin.c
+│       ├── jcapistd.c
+│       ├── jcarith.c
+│       ├── jccoefct.c
+│       ├── jccolext.c
+│       ├── jccolor.c
+│       ├── jcdctmgr.c
+│       ├── jchuff.c
+│       ├── jchuff.h
+│       ├── jcicc.c
+│       ├── jcinit.c
+│       ├── jcmainct.c
+│       ├── jcmarker.c
+│       ├── jcmaster.c
+│       ├── jcomapi.c
+│       ├── jconfig.h.in
+│       ├── jconfig.txt
+│       ├── jconfigint.h.in
+│       ├── jcparam.c
+│       ├── jcphuff.c
+│       ├── jcprepct.c
+│       ├── jcsample.c
+│       ├── jcstest.c
+│       ├── jctrans.c
+│       ├── jdapimin.c
+│       ├── jdapistd.c
+│       ├── jdarith.c
+│       ├── jdatadst-tj.c
+│       ├── jdatadst.c
+│       ├── jdatasrc-tj.c
+│       ├── jdatasrc.c
+│       ├── jdcoefct.c
+│       ├── jdcoefct.h
+│       ├── jdcol565.c
+│       ├── jdcolext.c
+│       ├── jdcolor.c
+│       ├── jdct.h
+│       ├── jddctmgr.c
+│       ├── jdhuff.c
+│       ├── jdhuff.h
+│       ├── jdicc.c
+│       ├── jdinput.c
+│       ├── jdmainct.c
+│       ├── jdmainct.h
+│       ├── jdmarker.c
+│       ├── jdmaster.c
+│       ├── jdmaster.h
+│       ├── jdmerge.c
+│       ├── jdmrg565.c
+│       ├── jdmrgext.c
+│       ├── jdphuff.c
+│       ├── jdpostct.c
+│       ├── jdsample.c
+│       ├── jdsample.h
+│       ├── jdtrans.c
+│       ├── jerror.c
+│       ├── jerror.h
+│       ├── jfdctflt.c
+│       ├── jfdctfst.c
+│       ├── jfdctint.c
+│       ├── jidctflt.c
+│       ├── jidctfst.c
+│       ├── jidctint.c
+│       ├── jidctred.c
+│       ├── jinclude.h
+│       ├── jmemmgr.c
+│       ├── jmemnobs.c
+│       ├── jmemsys.h
+│       ├── jmorecfg.h
+│       ├── jpeg_nbits_table.h
+│       ├── jpegcomp.h
+│       ├── jpegint.h
+│       ├── jpeglib.h
+│       ├── jpegtran.1
+│       ├── jpegtran.c
+│       ├── jquant1.c
+│       ├── jquant2.c
+│       ├── jsimd.h
+│       ├── jsimd_none.c
+│       ├── jsimddct.h
+│       ├── jstdhuff.c
+│       ├── jutils.c
+│       ├── jversion.h
+│       ├── libjpeg.map.in
+│       ├── libjpeg.txt
+│       ├── md5
+│       │   ├── CMakeLists.txt
+│       │   ├── md5.c
+│       │   ├── md5.h
+│       │   ├── md5cmp.c
+│       │   └── md5hl.c
+│       ├── rdbmp.c
+│       ├── rdcolmap.c
+│       ├── rdgif.c
+│       ├── rdjpgcom.1
+│       ├── rdjpgcom.c
+│       ├── rdppm.c
+│       ├── rdrle.c
+│       ├── rdswitch.c
+│       ├── rdtarga.c
+│       ├── release
+│       │   ├── Distribution.xml.in
+│       │   ├── License.rtf
+│       │   ├── ReadMe.txt
+│       │   ├── Welcome.rtf
+│       │   ├── deb-control.in
+│       │   ├── installer.nsi.in
+│       │   ├── libjpeg.pc.in
+│       │   ├── libturbojpeg.pc.in
+│       │   ├── makecygwinpkg.in
+│       │   ├── makedpkg.in
+│       │   ├── makemacpkg.in
+│       │   ├── makerpm.in
+│       │   ├── makesrpm.in
+│       │   ├── maketarball.in
+│       │   ├── rpm.spec.in
+│       │   └── uninstall.in
+│       ├── sharedlib
+│       │   └── CMakeLists.txt
+│       ├── simd
+│       │   ├── CMakeLists.txt
+│       │   ├── arm
+│       │   │   ├── jsimd.c
+│       │   │   └── jsimd_neon.S
+│       │   ├── arm64
+│       │   │   ├── jsimd.c
+│       │   │   └── jsimd_neon.S
+│       │   ├── gas-preprocessor.in
+│       │   ├── i386
+│       │   │   ├── jccolext-avx2.asm
+│       │   │   ├── jccolext-mmx.asm
+│       │   │   ├── jccolext-sse2.asm
+│       │   │   ├── jccolor-avx2.asm
+│       │   │   ├── jccolor-mmx.asm
+│       │   │   ├── jccolor-sse2.asm
+│       │   │   ├── jcgray-avx2.asm
+│       │   │   ├── jcgray-mmx.asm
+│       │   │   ├── jcgray-sse2.asm
+│       │   │   ├── jcgryext-avx2.asm
+│       │   │   ├── jcgryext-mmx.asm
+│       │   │   ├── jcgryext-sse2.asm
+│       │   │   ├── jchuff-sse2.asm
+│       │   │   ├── jcphuff-sse2.asm
+│       │   │   ├── jcsample-avx2.asm
+│       │   │   ├── jcsample-mmx.asm
+│       │   │   ├── jcsample-sse2.asm
+│       │   │   ├── jdcolext-avx2.asm
+│       │   │   ├── jdcolext-mmx.asm
+│       │   │   ├── jdcolext-sse2.asm
+│       │   │   ├── jdcolor-avx2.asm
+│       │   │   ├── jdcolor-mmx.asm
+│       │   │   ├── jdcolor-sse2.asm
+│       │   │   ├── jdmerge-avx2.asm
+│       │   │   ├── jdmerge-mmx.asm
+│       │   │   ├── jdmerge-sse2.asm
+│       │   │   ├── jdmrgext-avx2.asm
+│       │   │   ├── jdmrgext-mmx.asm
+│       │   │   ├── jdmrgext-sse2.asm
+│       │   │   ├── jdsample-avx2.asm
+│       │   │   ├── jdsample-mmx.asm
+│       │   │   ├── jdsample-sse2.asm
+│       │   │   ├── jfdctflt-3dn.asm
+│       │   │   ├── jfdctflt-sse.asm
+│       │   │   ├── jfdctfst-mmx.asm
+│       │   │   ├── jfdctfst-sse2.asm
+│       │   │   ├── jfdctint-avx2.asm
+│       │   │   ├── jfdctint-mmx.asm
+│       │   │   ├── jfdctint-sse2.asm
+│       │   │   ├── jidctflt-3dn.asm
+│       │   │   ├── jidctflt-sse.asm
+│       │   │   ├── jidctflt-sse2.asm
+│       │   │   ├── jidctfst-mmx.asm
+│       │   │   ├── jidctfst-sse2.asm
+│       │   │   ├── jidctint-avx2.asm
+│       │   │   ├── jidctint-mmx.asm
+│       │   │   ├── jidctint-sse2.asm
+│       │   │   ├── jidctred-mmx.asm
+│       │   │   ├── jidctred-sse2.asm
+│       │   │   ├── jquant-3dn.asm
+│       │   │   ├── jquant-mmx.asm
+│       │   │   ├── jquant-sse.asm
+│       │   │   ├── jquantf-sse2.asm
+│       │   │   ├── jquanti-avx2.asm
+│       │   │   ├── jquanti-sse2.asm
+│       │   │   ├── jsimd.c
+│       │   │   └── jsimdcpu.asm
+│       │   ├── jsimd.h
+│       │   ├── loongson
+│       │   │   ├── jccolext-mmi.c
+│       │   │   ├── jccolor-mmi.c
+│       │   │   ├── jcsample-mmi.c
+│       │   │   ├── jcsample.h
+│       │   │   ├── jdcolext-mmi.c
+│       │   │   ├── jdcolor-mmi.c
+│       │   │   ├── jdsample-mmi.c
+│       │   │   ├── jfdctint-mmi.c
+│       │   │   ├── jidctint-mmi.c
+│       │   │   ├── jquanti-mmi.c
+│       │   │   ├── jsimd.c
+│       │   │   ├── jsimd_mmi.h
+│       │   │   └── loongson-mmintrin.h
+│       │   ├── mips
+│       │   │   ├── jsimd.c
+│       │   │   ├── jsimd_dspr2.S
+│       │   │   └── jsimd_dspr2_asm.h
+│       │   ├── nasm
+│       │   │   ├── jcolsamp.inc
+│       │   │   ├── jdct.inc
+│       │   │   ├── jpeg_nbits_table.inc
+│       │   │   ├── jsimdcfg.inc
+│       │   │   ├── jsimdcfg.inc.h
+│       │   │   └── jsimdext.inc
+│       │   ├── powerpc
+│       │   │   ├── jccolext-altivec.c
+│       │   │   ├── jccolor-altivec.c
+│       │   │   ├── jcgray-altivec.c
+│       │   │   ├── jcgryext-altivec.c
+│       │   │   ├── jcsample-altivec.c
+│       │   │   ├── jcsample.h
+│       │   │   ├── jdcolext-altivec.c
+│       │   │   ├── jdcolor-altivec.c
+│       │   │   ├── jdmerge-altivec.c
+│       │   │   ├── jdmrgext-altivec.c
+│       │   │   ├── jdsample-altivec.c
+│       │   │   ├── jfdctfst-altivec.c
+│       │   │   ├── jfdctint-altivec.c
+│       │   │   ├── jidctfst-altivec.c
+│       │   │   ├── jidctint-altivec.c
+│       │   │   ├── jquanti-altivec.c
+│       │   │   ├── jsimd.c
+│       │   │   └── jsimd_altivec.h
+│       │   └── x86_64
+│       │       ├── jccolext-avx2.asm
+│       │       ├── jccolext-sse2.asm
+│       │       ├── jccolor-avx2.asm
+│       │       ├── jccolor-sse2.asm
+│       │       ├── jcgray-avx2.asm
+│       │       ├── jcgray-sse2.asm
+│       │       ├── jcgryext-avx2.asm
+│       │       ├── jcgryext-sse2.asm
+│       │       ├── jchuff-sse2.asm
+│       │       ├── jcphuff-sse2.asm
+│       │       ├── jcsample-avx2.asm
+│       │       ├── jcsample-sse2.asm
+│       │       ├── jdcolext-avx2.asm
+│       │       ├── jdcolext-sse2.asm
+│       │       ├── jdcolor-avx2.asm
+│       │       ├── jdcolor-sse2.asm
+│       │       ├── jdmerge-avx2.asm
+│       │       ├── jdmerge-sse2.asm
+│       │       ├── jdmrgext-avx2.asm
+│       │       ├── jdmrgext-sse2.asm
+│       │       ├── jdsample-avx2.asm
+│       │       ├── jdsample-sse2.asm
+│       │       ├── jfdctflt-sse.asm
+│       │       ├── jfdctfst-sse2.asm
+│       │       ├── jfdctint-avx2.asm
+│       │       ├── jfdctint-sse2.asm
+│       │       ├── jidctflt-sse2.asm
+│       │       ├── jidctfst-sse2.asm
+│       │       ├── jidctint-avx2.asm
+│       │       ├── jidctint-sse2.asm
+│       │       ├── jidctred-sse2.asm
+│       │       ├── jquantf-sse2.asm
+│       │       ├── jquanti-avx2.asm
+│       │       ├── jquanti-sse2.asm
+│       │       ├── jsimd.c
+│       │       └── jsimdcpu.asm
+│       ├── structure.txt
+│       ├── testimages
+│       │   ├── nightshot_iso_100.bmp
+│       │   ├── nightshot_iso_100.txt
+│       │   ├── test1.icc
+│       │   ├── test1.icc.txt
+│       │   ├── test2.icc
+│       │   ├── test2.icc.txt
+│       │   ├── testimgari.jpg
+│       │   ├── testimgint.jpg
+│       │   ├── testorig.jpg
+│       │   ├── testorig.ppm
+│       │   ├── testorig12.jpg
+│       │   ├── vgl_5674_0098.bmp
+│       │   ├── vgl_6434_0018a.bmp
+│       │   └── vgl_6548_0026a.bmp
+│       ├── tjbench.c
+│       ├── tjbenchtest.in
+│       ├── tjbenchtest.java.in
+│       ├── tjexample.c
+│       ├── tjexampletest.in
+│       ├── tjexampletest.java.in
+│       ├── tjunittest.c
+│       ├── tjutil.c
+│       ├── tjutil.h
+│       ├── transupp.c
+│       ├── transupp.h
+│       ├── turbojpeg-jni.c
+│       ├── turbojpeg-mapfile
+│       ├── turbojpeg-mapfile.jni
+│       ├── turbojpeg.c
+│       ├── turbojpeg.h
+│       ├── usage.txt
+│       ├── win
+│       │   ├── jconfig.h.in
+│       │   ├── jpeg62-memsrcdst.def
+│       │   ├── jpeg62.def
+│       │   ├── jpeg7-memsrcdst.def
+│       │   ├── jpeg7.def
+│       │   └── jpeg8.def
+│       ├── wizard.txt
+│       ├── wrbmp.c
+│       ├── wrgif.c
+│       ├── wrjpgcom.1
+│       ├── wrjpgcom.c
+│       ├── wrppm.c
+│       ├── wrrle.c
+│       └── wrtarga.c
+└── tree.txt
+
+30 directories, 483 files

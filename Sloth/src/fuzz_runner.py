@@ -8,9 +8,11 @@ import random
 # Chemin vers le binaire Sloth
 SLOTH_BIN = "./sloth"
 # Chemin vers le binaire cible pour le fuzzing
-TARGET_BIN = "/rootfs/boofuzz"
+# TARGET_BIN = "/rootfs/boofuzz"
+TARGET_BIN = "/rootfs/jpegfuzz"
 # Chemin vers la bibliothèque cible pour le fuzzing
-TARGET_LIB = "/rootfs/system/lib64/libBooFuzz.so"
+# TARGET_LIB = "/rootfs/system/lib64/libBooFuzz.so"
+TARGET_LIB = "/rootfs/system/lib64/libJpegFuzz.so"
 # Répertoire pour les entrées de test
 INPUT_DIR = "./test"
 # Répertoire pour les crashes détectés
